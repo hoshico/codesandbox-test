@@ -37,15 +37,15 @@ val5.push("monkey");
 console.log(val5);
 
 //テンプレート文字列
-const name = "やす";
-const age = 34;
+// const name = "やす";
+// const age = 34;
 
-const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
-console.log(message1);
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+// console.log(message1);
 
 //テンプレート文字列を用いた方法
-const message2 = `私の名前は${name}です。年齢は${age}です。`;
-console.log(message2);
+// const message2 = `私の名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
 
 //従来の関数
 function func1(str) {
@@ -64,3 +64,27 @@ const func3 = (num1, num2) => {
 };
 
 console.log(func3(10, 20));
+
+//分割代入
+//オブジェクトから指定のプロパティを抜きだし自由に使える
+
+// const myProfile = {
+//   name: "やす",
+//   age: 34,
+// };
+
+// const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}です`;
+// console.log(message3);
+
+// const { name, age } = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}です`;
+// console.log(message4);
+
+const myProfile = ["やす", 34];
+
+const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+console.log(message3);
+
+const [name, age] = myProfile;
+const message4 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message4);
