@@ -80,19 +80,19 @@ console.log(func3(10, 20));
 // const message4 = `名前は${name}です。年齢は${age}です`;
 // console.log(message4);
 
-const myProfile = ["やす", 34];
+// const myProfile = ["やす", 34];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳です。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳です。`;
+// console.log(message4);
 
 //デフォルト値(引数ががない場合の初期値を設定)
 
-const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん`);
-sayHello();
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん`);
+// sayHello();
 
 //スプレッド構文 ...
 
@@ -113,11 +113,34 @@ sayHello();
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-console.log(arr6);
+// const arr6 = [...arr4];
+// console.log(arr6);
 
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+//mapやfiltterを使った配列の処理
+const nameArr = ["田中", "山田", "やす"];
+
+// for (let i = 0; i < nameArr.length; i++) {
+//   console.log(nameArr[i]);
+// }
+
+// const nameArr2 = nameArr.map((name)=> {
+//   return name;
+// })
+
+// console.log(nameArr2);
+
+// nameArr.map((name)=> console.log(name));
+
+//単純に配列に操作とreturnした結果をもとに配列を作る
+
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+console.log(newNumArr);
