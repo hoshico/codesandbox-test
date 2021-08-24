@@ -126,7 +126,7 @@ console.log(func3(10, 20));
 const nameArr = ["田中", "山田", "やす"];
 
 // for (let i = 0; i < nameArr.length; i++) {
-//   console.log(nameArr[i]);
+//   console.log(`${i + 1}番目は${nameArr[i]}です`);
 // }
 
 // const nameArr2 = nameArr.map((name)=> {
@@ -135,12 +135,22 @@ const nameArr = ["田中", "山田", "やす"];
 
 // console.log(nameArr2);
 
-// nameArr.map((name)=> console.log(name));
+// nameArr.map((name, i) => console.log(`${i + 1}番目は${name}です。`));
 
 //単純に配列に操作とreturnした結果をもとに配列を作る
 
-const numArr = [1, 2, 3, 4, 5];
-const newNumArr = numArr.filter((num) => {
-  return num % 2 === 1;
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "やす") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
 });
-console.log(newNumArr);
+
+console.log(newNameArr);
